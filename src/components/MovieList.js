@@ -1,6 +1,6 @@
 import React from "react";
-
 import MovieCard from "./Movie-Card";
+import withLoader from "./withLoader"
 
 const MovieList = ({ movies = [] }) => {
   return (
@@ -11,4 +11,4 @@ const MovieList = ({ movies = [] }) => {
     </div>
   );
 };
-export default MovieList;
+export default withLoader(MovieList);

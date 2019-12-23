@@ -4,6 +4,7 @@ import Searchform from "./components/Search-Form";
 import MovieList from "./components/MovieList";
 import ModalForm from "./components/Modal";
 
+
 import "./App.css";
 
 const starwars = {
@@ -50,11 +51,13 @@ class App extends React.Component {
     movies: moviesToDisplay,
     nameFilter: "",
     modalIsOpen: false,
-    newMovie: { name: "", date: "", image: "", rating: "" }
+    newMovie: { name: "", date: "", image: "", rating: "" },
+    isLoading: false
   };
 
   onStarClick = nextValue => {
-    this.setState({ minRating: nextValue });
+    setTimeout(()=>this.setState({isLoading:false}),1500)
+    this.setState({ minRating: nextValue, isLoading:true });
   };
 
   getVisibleMovies() {
@@ -142,12 +145,13 @@ class App extends React.Component {
           onStarClick={this.onStarClick}
           rating={this.state.minRating}
           onChange={newNameFilter => {
+            setTimeout(()=>this.setState({isLoading:false}),1500)
             this.setState({
-              nameFilter: newNameFilter
+              nameFilter: newNameFilter ,isLoading:true
             });
           }}
         />
-        <MovieList movies={this.getVisibleMovies()} />
+        <MovieList movies={this.getVisibleMovies()} isLoading={this.state.isLoading} />
         <button className="Add-btn" onClick={this.openModal}>
           Add Movie
         </button>
@@ -160,6 +164,7 @@ class App extends React.Component {
           addImage={this.addImage}
           submitModal={this.submitModal}
         />
+ 
       </div>
     );
   }

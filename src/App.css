@@ -67,7 +67,6 @@ img {
 .Movie-List {
   display: flex;
   flex-wrap: wrap;
-  /* justify-content: space-between; */
 }
 .Add-btn {
   border-radius: 5px;
@@ -123,4 +122,9 @@ form input:focus {
 }
 .Modal-btn:focus {
   outline: 0;
+}
+.Spinner{
+  width: 70px;
+  margin-left: 45%;
+  z-index: 1;
 }
