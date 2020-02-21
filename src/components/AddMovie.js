@@ -14,7 +14,7 @@ const customStyles = {
   }
 };
 
-const ModalForm = ({
+const AddMovie = ({
   modalIsOpen,
   closeModal,
   addTitle,
@@ -52,4 +52,4 @@ const ModalForm = ({
   );
 };
 
-export default ModalForm;
+export default AddMovie;

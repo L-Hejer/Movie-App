@@ -1,3 +1,4 @@
+/* SEARCH INPUT & STARS */
 .search-container {
   margin: 40px 0px;
   display: flex;
@@ -32,6 +33,7 @@
   font-size: 24px;
   padding-left: 10px;
 }
+/* MOVIE CARD */
 .Movie-Container {
   border: 1px solid rgba(211, 211, 211, 0.8);
   box-shadow: lightgray;
@@ -64,19 +66,24 @@ img {
   font-size: small;
   margin: 10px 10px 10px 10px;
 }
+/* MOVIES LIST */
 .Movie-List {
   display: flex;
   flex-wrap: wrap;
 }
+/* ADD BUTTON */
 .Add-btn {
   border-radius: 5px;
   background-color: lightseagreen;
   border: transparent;
   color: white;
+  font-size: 300px;
   padding: 8px 20px;
   margin-left: 40px;
   margin-bottom: 30px;
   cursor: pointer;
+  width: 250px;
+  height: 500px;
 }
 .Add-btn:hover {
   background-color: rgba(32, 178, 170, 0.8);
@@ -84,6 +91,7 @@ img {
 .Add-btn:focus {
   outline: 0;
 }
+/* ADD MOVIE MODAL */
 form h1 {
   text-decoration: underline;
 }
@@ -123,7 +131,8 @@ form input:focus {
 .Modal-btn:focus {
   outline: 0;
 }
-.Spinner{
+/* SPINNER */
+.Spinner {
   width: 70px;
   margin-left: 45%;
   z-index: 1;
